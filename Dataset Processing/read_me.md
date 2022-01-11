@@ -6,3 +6,13 @@ This folder and its sub-parts make up the preprocessing pielines used for the 5 
 The loose files (not folders of files) contained in this directory are all general purpose and can be used for multiple/all of teh datasets, these contain:
   - to_np_and_norm.py (converting raw .wav files to a npt format for faster loading into other files and scripts)
   - to_spec.py (converts the .npy raw audio files into log-mel spectrograms and re-stores them in .npy)
+
+
+
+Sources for datasets:
+  - https://github.com/karolpiczak/ESC-50 (ESC-50)
+  - https://magenta.tensorflow.org/datasets/nsynth (NSynth)
+  - https://www.robots.ox.ac.uk/~vgg/data/voxceleb/vox1.html (VoxCeleb1)
+  - https://zenodo.org/record/2552860#.Yd2sLGDP2Uk (FSDKaggle18)
+  - https://www.aicrowd.com/clef_tasks/22/task_dataset_files?challenge_id=211 (BirdClef2020)
+  - https://www.kaggle.com/ttahara/birdsong-resampled-train-audio-00 (An easier to get approx/variant of BirdClef2020)
