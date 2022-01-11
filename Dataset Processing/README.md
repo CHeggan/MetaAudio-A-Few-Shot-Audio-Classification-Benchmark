@@ -5,10 +5,15 @@ This folder and its sub-parts make up the preprocessing pielines used for the 5 
   - The mirror directory is then mirrored a second time (could edit codes to replace if storage is an issue), where each sample is now converted into a log-mel spectrogram and stored again as an .npy file
 
 
-The loose files (not folders of files) contained in this directory are all general purpose and can be used for multiple/all of teh datasets, these contain:
+Some of the loose files contained in this directory are general purpose and can be used for multiple/all of the datasets, these contain:
   - to_np_and_norm.py (converting raw .wav files to a npt format for faster loading into other files and scripts)
   - to_spec.py (converts the .npy raw audio files into log-mel spectrograms and re-stores them in .npy)
 
+
+In addition to these files as well as the more specific ones included in the sub-directory are some example full stack processing pielines for a variety of thedatasets. These can be edited and modified to suit specific needs but should help illustrate how all the processing scripts fit together. these are namely:
+  - full_stack_ESC.py
+  - full_stack_NSYNTH.py
+  - full_stack_KAGGLE18.py
 
 
 Sources for datasets:
