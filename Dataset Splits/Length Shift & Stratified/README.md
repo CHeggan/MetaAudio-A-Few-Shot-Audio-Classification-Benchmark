@@ -16,6 +16,6 @@ Actually creating these splits can easily become a fairly complex optimisation p
 
 ## Example 
 
-Below is an example illustarting these splits for the Kaggle18 dataset. IN teh middle we have the normal (random) split and on the left/right we have the 
+Below is an example illustrating these splits for the Kaggle18 dataset. We chose this dataset as its small size allows the differences between the splits to be more easily be seen. In the middle we have the normal (random) split and on the left/right we have the shifted/stratified respectively. 
 
 ![This is an image](Images/length_dist.png)
