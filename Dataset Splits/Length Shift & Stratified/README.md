@@ -18,4 +18,4 @@ Actually creating these splits can easily become a fairly complex optimisation p
 
 Below is an example illustarting these splits for the Kaggle18 dataset. IN teh middle we have the normal (random) split and on the left/right we have the 
 
-![This is an image](/assets/images/length_dist.png)
+![This is an image](length_dist.png)
