@@ -15,7 +15,7 @@ Actually creating these splits can easily become a fairly complex optimisation p
   -   For each split element in strat (train/val/test), select classes from both sides of the sorted list each time a selection is made and repeat until desired ratios are met. The intuition here is that the expected shortest length class is in the same split as the longest, and so on, creating a widened but more uniform distribution for all splits. It is worth noting that quantitative values (expected distribution values) can be generated for each split as a way of validating our simple approach, these are automatically given from our length_dist.py file. 
 
 ## Files
-Included are codes for booth the creation and visualisation of the sample length aware splits. Specifically we include the following scripts:
+Included in the Codes folder are the scripts for both the creation and visualisation of the sample length aware splits. Specifically we include the following scripts:
   - dist_search.py (Responsible for actually generating the new splits)
   - length_dist.py (Visulises some dataset split)
   - utils.py (Some basic utility functions to be used with dist_search.py)
