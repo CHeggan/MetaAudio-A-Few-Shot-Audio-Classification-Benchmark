@@ -1,3 +1,5 @@
+## Sample Length Aware Splits
+
 Here we have the length distribution shifted and stratified dataset splits as well as the codes used to create them. 
 
 The idea behind defining these splits was to investigate how either similar or mismatched sample length distrbutions between train and test times impacted performance of our models. For each variable length dataset (Kaggle18, VoxCeleb1, BirdClef2020) we define both a shifted and stratified split:
