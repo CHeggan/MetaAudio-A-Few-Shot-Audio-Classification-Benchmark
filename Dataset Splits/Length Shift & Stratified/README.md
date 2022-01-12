@@ -16,7 +16,9 @@ Actually creating these splits can easily become a fairly complex optimisation p
 
 ## Files
 Included are codes for booth the creation and visualisation of the sample length aware splits. Specifically we include the following scripts:
-  - dist_search.py
+  - dist_search.py (Responsible for actually generating the new splits)
+  - length_dist.py (Visulises some dataset split)
+  - utils.py (Some basic utility functions to be used with dist_search.py)
 
 ## Example 
 
