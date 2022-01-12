@@ -24,7 +24,4 @@ Below is an example illustrating these splits for the Kaggle18 dataset. We chose
   - The train and test distributions have a significantly larger difference between them than in found in the random split, or by extension the stratified split
   - The stratified split, over all train/val/test, is more uniform with expected value peaks all much closer in value than in the random split (where validation was a bit of an outlier)
 
-
-From the plots can see a number of things, however the most important is that in the shifted split we see a significant gap between teh sample length distribuions of train and test, whereas in stratified this does not occur.
-
 ![This is an image](Images/length_dist.png)
