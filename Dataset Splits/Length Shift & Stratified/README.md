@@ -8,14 +8,23 @@ The idea behind defining these splits was to investigate how either similar or m
   
 ## Creation Of The Splits
 Actually creating these splits can easily become a fairly complex optimisation problem itself, however to avoid this and the time/computational costs associated wetake a simple and intuitive approach. This is outlined more in the paper however the basic methodology is as follows:
-  - Calculate an expected average sample length for each class based on some % of its total samples
+  - Calculate an expected average sample length for each class based on some % of its total samples (using all samples for some classes renders poorer overall results, opt to use 60% based on some tuning)
   - Sort these expected averages in ascending or descending order
   - Two different options for shift/strat:
   -   For shift, take first n classes in the sorted list to reach desired training ratio of full set of classes, repeat with leftover classes for validation and then finally testing. Taking training first and leaving testing to last should create a natural distribution shift with respect to sample lengths
-  -   For each split element in strat (train/val/test), select classes from both sides of the sorted list each time a selection is made and repeat until desired ratios are met. The intuition here is that the expected shortest length class is in the same split as the longest, and so on, creating a widened distribution for all splits
+  -   For each split element in strat (train/val/test), select classes from both sides of the sorted list each time a selection is made and repeat until desired ratios are met. The intuition here is that the expected shortest length class is in the same split as the longest, and so on, creating a widened but more uniform distribution for all splits. It is worth noting that quantitative values (expected distribution values) can be generated for each split as a way of validating our simple approach, these are automatically given from our length_dist.py file. 
+
+## Files
+Included are codes for booth the creation and visualisation of the sample length aware splits. Specifically we include the following scripts:
+  - dist_search.py
 
 ## Example 
 
-Below is an example illustrating these splits for the Kaggle18 dataset. We chose this dataset as its small size allows the differences between the splits to be more easily be seen. In the middle we have the normal (random) split and on the left/right we have the shifted/stratified respectively. 
+Below is an example illustrating these splits for the Kaggle18 dataset. We chose this dataset as its small size allows the differences between the splits to be more easily be seen. In the middle we have the normal (random) split and on the left/right we have the shifted/stratified respectively.  Comparing both of our newly defined split to the random split we can see the explicit effects we were hoping for:
+  - The train and test distributions have a significantly larger difference between them than in found in the random split, or by extension the stratified split
+  - The stratified split, over all train/val/test, is more uniform with expected value peaks all much closer in value than in the random split (where validation was a bit of an outlier)
+
+
+From the plots can see a number of things, however the most important is that in the shifted split we see a significant gap between teh sample length distribuions of train and test, whereas in stratified this does not occur.
 
 ![This is an image](Images/length_dist.png)
