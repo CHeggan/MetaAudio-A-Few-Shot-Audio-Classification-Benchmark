@@ -1,5 +1,10 @@
 ## Meta-Aware Splits
 
-For both of our fixed length datasets (ESC-50 & NSynth) we define some meta-data aware stratified splits. The aim of doing so is to allow the community to more widely expeirment and build out this bechmark work with addiitonal and more in-depth setups. 
+For both of our fixed length datasets (ESC-50 & NSynth) we define some meta-data aware stratified splits, motivated by the goal of allowing for more complex and specific problem statemenets. For both of these sets we look at using major class groupings in order to do this, were for each major grouping we share the classes belonging to equally (by weight, i.e 70% for training) between train/val/test. 
 
-For both of these sets we look at using majour class groupings in order to do this, were for each major grouping of classes we seperate equally 
+# ESC-50
+
+
+
+
+# NSynth
