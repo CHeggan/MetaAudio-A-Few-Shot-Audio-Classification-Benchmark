@@ -7,4 +7,7 @@ This kind of standardisation is already present in few-shot imagery where set ev
 # Types of Split
 In this work we experiment with many of the splits included in this repo, though not all, in an attempt to investigate some interesting and unique behaviours of few-shot acoustic classification. Included here, we have 3 different types of datasets splits:
   - Baseline (Randomly generated with no additional information taken into account)
-  - Variable Length 
+  - Length shifted and stratified (Sample length distribution shifts or stratifications)
+  - Meta-aware (Splits which are stratified over some meta-data)
+
+Each of these types are explained further in their own respective section
