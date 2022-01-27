@@ -77,6 +77,15 @@ def single_to_spectrogram(data,  **spec_args):
 # STCAKED SPECTROGRAM FUNCTION
 ###############################################################################
 def stacked_spec(og_file_path, new_dir, length, spec_params):
+    """Creates a stacked fixed length spectrogram representation from a .npy 
+        audio file
+
+    Args:
+        og_file_path (str): The exact path to the current file location
+        new_dir (str): Exact path to teh new data save location
+        length (int): The length in seconds that we create the representation for
+        spec_params (dict): Dictionary of spectrogram paramaters
+    """
     expected_size = spec_params['sr'] * length
 
     # Generates the new filename path
@@ -141,6 +150,14 @@ def stacked_spec(og_file_path, new_dir, length, spec_params):
 # MAIN FUNCTION
 ###############################################################################
 def main(old_dir, new_dir, sample_length, spec_params):
+    """The main sprctogram creation function for variable length datasets
+
+    Args:
+        old_dir (str): Path to current data directory
+        new_dir (str): Path to create new mirrored directory at
+        sample_length (int): The length for sample clipping and stacking in seconds
+        spec_params (dict): Dictionary of spectrogram params
+    """
     try:
         os.mkdir(new_dir)
 
@@ -189,17 +206,8 @@ def main(old_dir, new_dir, sample_length, spec_params):
 ###############################################################################
 # MAIN CALL
 ###############################################################################
-# Desktop
-# old_dir = 'X:/Datasets/Kaggle AudioSet/Sorted_npy'
-# new_dir = 'X:/Datasets/Kaggle AudioSet/Spec_10_seconds_npy'
-
 old_dir = 'D:/Dataset Backups/Datasets/BirdSong/BirdClef2020/Sorted_npy'
-#old_dir = 'X:\Datasets\Bird Sounds\BirdClef 2020/Sorted_npy'
 new_dir = 'X:\Datasets\Bird Sounds\BirdClef 2020/Spec_5_seconds_npy_'
-
-#old_dir = 'C:/Users/user/Documents/Datasets/FSDKaggle18/Sorted_npy'
-#new_dir = 'C:/Users/user/Documents/Datasets/FSDKaggle18/Spec_1_second_npy'
-
 
 sample_length = 5
 
