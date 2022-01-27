@@ -3,7 +3,7 @@ File deals with taking in all of the unsorted train and test data and spits
     out a sorted directory of classes and their corresponding files
 As this data will be getting used for meta-learning, all of it will go into
     one train folder, where test/ val splits can then be sampled from
-This set was created for a more traditional machine-learning approach in mind
+The Kaggle18 set was created for a more traditional machine-learning approach in mind
     and so train and test share the exact same set of classes
 """
 
@@ -13,7 +13,6 @@ This set was created for a more traditional machine-learning approach in mind
 import os
 import numpy as np
 import pandas as pd
-
 from shutil import copyfile
 
 ##############################################################################
@@ -65,7 +64,13 @@ def grab_move_files(folders, folder_paths, og_data_path, df):
 ##############################################################################
 # MAIN FUNCTION
 ##############################################################################
-def main(main_dir, small_set=True):
+def main(main_dir):
+    """Main Kaggle18 sorting function. Reads in meta data required. Assumes being
+        directed to the master folder
+
+    Args:
+        main_dir (str): Path to the Kaggle18 master folder
+    """
     # Paths to the meta data files 
     meta_path_test = os.path.join(main_dir, 'FSDKaggle2018.meta', 'test_post_competition_scoring_clips.csv')
     meta_path_train = os.path.join(main_dir, 'FSDKaggle2018.meta', 'train_post_competition.csv')
