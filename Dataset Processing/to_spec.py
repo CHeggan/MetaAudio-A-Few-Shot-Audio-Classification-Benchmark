@@ -66,13 +66,13 @@ def to_spectrogram(og_file_path, new_dir, length, **spec_args):
 # MAIN FUNCTION
 ###############################################################################
 def main(old_dir, new_dir, sample_length, spec_params):
-    """[summary]
+    """ Mian spec conversion function. Deals with actual iteration thorugh the dataset
 
     Args:
-        old_dir ([type]): [description]
-        new_dir ([type]): [description]
-        sample_length ([type]): [description]
-        spec_params ([type]): [description]
+        old_dir (str): [The old data directory path - exact
+        new_dir (str): The new data directory path - exact
+        sample_length (int): The sample length to read in the samples at
+        spec_params (dict): dictionary of spectrogram parameters
     """
     try:
         os.mkdir(new_dir)
