@@ -6,7 +6,8 @@ As this data will be getting used for meta-learning, all of it will go into
 This set was created for a more traditional machine-learning approach in mind
     and so train and test share the exact same set of classes
 
-This script specifically targets ESC-50 dataset
+This script specifically targets ESC-50 dataset and assumes that the mats data
+    file meta.csv is in the main directory (as it is when downloaded form source)
 """
 
 ##############################################################################
