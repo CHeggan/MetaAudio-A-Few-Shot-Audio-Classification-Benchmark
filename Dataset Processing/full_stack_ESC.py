@@ -26,7 +26,7 @@ import os
 # Grabs all of the relevent main fucntions from associated scripts
 from to_spec import main as to_spec_main
 from to_np_and_norm import main as np_norm_main
-from folder_sorting import main as folder_sort_main
+from folder_sort_ESC import main as folder_sort_main
 
 #MAIN_DIR = 'X:\Datasets\ESC-50-master'
 #FINAL_SPEC_PATH = 'X:\Datasets\ESC-50-master\ESC_spec'
