@@ -17,7 +17,6 @@ Some of the loose files contained in this directory are general purpose and can 
 In addition to these files as well as the more specific ones included in the sub-directory are some example full stack processing pielines for a variety of the datasets. These can be edited and modified to suit specific needs but should help illustrate how all the processing scripts fit together. These are namely:
   - full_stack_ESC.py
   - full_stack_NSYNTH.py
-  - full_stack_KAGGLE18.py
 
 ## Dataset Sources
 Sources for datasets:
