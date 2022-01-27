@@ -15,9 +15,8 @@ Like the other inclded scripts here for the NSYNTH set, MAIN_DIR is expected to
 import os
 import json
 import pandas as pd
-from shutil import copyfile
-
 from tqdm import tqdm
+from shutil import copyfile
 
 ##############################################################################
 # META DATA EXTRACTION
