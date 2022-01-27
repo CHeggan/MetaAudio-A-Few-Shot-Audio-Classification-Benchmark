@@ -66,20 +66,12 @@ def grab_move_files(folders, folder_paths, og_data_path, df):
 # MAIN FUNCTION
 ##############################################################################
 def main(main_dir, small_set=True):
-    if small_set:
-        # Paths to the meta data files 
-        meta_path_test = os.path.join(main_dir, 'FSDKaggle2018.meta', 'test_post_competition_scoring_clips.csv')
-        meta_path_train = os.path.join(main_dir, 'FSDKaggle2018.meta', 'train_post_competition.csv')
-        # Path to data
-        test_folder = os.path.join(main_dir, 'FSDKaggle2018.audio_test')
-        train_folder = os.path.join(main_dir, 'FSDKaggle2018.audio_train')
-    else:
-        # Paths to the meta data files 
-        meta_path_test = os.path.join(main_dir, 'test_post_competition.csv')
-        meta_path_train = os.path.join(main_dir, 'train_post_competition.csv')
-        # Path to data
-        test_folder = os.path.join(main_dir, 'audio_test')
-        train_folder = os.path.join(main_dir, 'audio_train')
+    # Paths to the meta data files 
+    meta_path_test = os.path.join(main_dir, 'FSDKaggle2018.meta', 'test_post_competition_scoring_clips.csv')
+    meta_path_train = os.path.join(main_dir, 'FSDKaggle2018.meta', 'train_post_competition.csv')
+    # Path to data
+    test_folder = os.path.join(main_dir, 'FSDKaggle2018.audio_test')
+    train_folder = os.path.join(main_dir, 'FSDKaggle2018.audio_train')
 
     # Sorted train, will go in main_dir
     sorted_train = 'Sorted'
@@ -101,7 +93,7 @@ def main(main_dir, small_set=True):
     # Creates all the necessary folders
     folder_paths = create_class_folders(folders, sorted_train)
 
-    # Performs the sorting for the two sets, remeber they go same folders 
+    # Performs the sorting for the two sets, remember they go same folders 
     grab_move_files(folders, folder_paths, test_folder, test_df)
     grab_move_files(folders, folder_paths, train_folder, train_df)
 
@@ -111,12 +103,6 @@ def main(main_dir, small_set=True):
 ##############################################################################
 
 # Main directory path
-
-# Laptop
-#main_dir = 'C:/Users/user/Documents/Datasets/FSD AudioSet Small'
-#main_dir = 'C:/Users/user/Documents/Datasets/FSD AudioSet Large'
-
-# Desktop
 main_dir = 'X:/Datasets/Kaggle AudioSet'
 
-main(main_dir, True)
+main(main_dir)
