@@ -142,12 +142,8 @@ def main(old_dir, new_dir, sr, norm):
 ###############################################################################
 # MAIN CALL
 ###############################################################################
-# Laptop
-#old_dir = 'C:/Users/user/Documents/Datasets/FSD AudioSet Small/Sorted_raw'
-#new_dir = 'C:/Users/user/Documents/Datasets/FSD AudioSet Small/Sorted_npy'
-
 # Desktop
 #old_dir = 'X:/Datasets/ESC-50-master/Sorted'
 #new_dir = 'X:/Datasets/ESC-50-master/Sorted_npy'
 
-#main(old_dir, new_dir, 16000)
+#main(old_dir, new_dir, sr=16000. norm=True)
