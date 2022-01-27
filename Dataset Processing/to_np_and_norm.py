@@ -146,4 +146,4 @@ def main(old_dir, new_dir, sr, norm):
 #old_dir = 'X:/Datasets/ESC-50-master/Sorted'
 #new_dir = 'X:/Datasets/ESC-50-master/Sorted_npy'
 
-#main(old_dir, new_dir, sr=16000. norm=True)
+#main(old_dir, new_dir, sr=16000,norm=True)
