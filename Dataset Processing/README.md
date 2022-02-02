@@ -20,7 +20,7 @@ In addition to these files as well as the more specific ones included in the sub
 
 ## Other Considerations
 For working with some of these datasets, we perform some cleaning/clipping in order to make the training and evaluation more tractable on consumer grade GPUs. This primarily involves the removal of incredibly long and rare clips. This filtering is only done on two occasions, these are:
-  - For the Watkins mammal dataset, where there are 1-3 clips ~20 minutes long present in the dataset. We remove all samples longer than 3 minutes for this set.
+  - For the Watkins mammal dataset, where there are 1-3 clips ~20 minutes long present in the dataset. We remove all samples longer than 3 minutes for this set which results in 8 removed clips in total.
   - For the whole dataset pruning of BirdClef as detailed further below
 
 ## BirdClef Pruning
