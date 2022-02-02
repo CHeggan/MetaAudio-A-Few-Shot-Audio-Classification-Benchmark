@@ -18,6 +18,16 @@ In addition to these files as well as the more specific ones included in the sub
   - full_stack_ESC.py
   - full_stack_NSYNTH.py
 
+## Other Considerations
+For working with some of these datasets, we perform some cleaning/clipping in order to make the training and evaluation more tractable on consumer grade GPUs. This primarily involves the removal of incredibly long and rare clips. This filtering is only done on two occasions, these are:
+  - For the Watkins mammal dataset, where there are 1-3 clips ~20 minutes long present in the dataset. We remove all samples longer than 3 minutes for this set.
+  - For the whole dataset pruning of BirdClef as detailed further below
+
+## BirdClef Pruning
+The BirdClef dataset in its main and raw form is incredibly variable in length, spanning samples of 3 seconds to 30 minutes. Although samples longer than a few minutes are in the minority of the set, their inclusion requires larger memory GPUs to be used with a huge amount of headroom assumed. This directly goes against our goal with reproducibility and so we define a pruned version of the set which is much more internally consistent. Specifically we do two things, we remove:
+  - Samples longer than 3 minutes (a max value chosen based off of the well-behaving VoxCeleb dataset)
+  - Classes with less than 50 samples present after long samples have already been eradiacted
+
 ## Dataset Sources
 Sources for datasets:
   - https://github.com/karolpiczak/ESC-50 (ESC-50)
@@ -26,3 +36,7 @@ Sources for datasets:
   - https://zenodo.org/record/2552860#.Yd2sLGDP2Uk (FSDKaggle18)
   - https://www.aicrowd.com/clef_tasks/22/task_dataset_files?challenge_id=211 (BirdClef2020)
   - https://www.kaggle.com/ttahara/birdsong-resampled-train-audio-00 (An easier to get approx/variant of BirdClef2020)
+  - Watkins Marine Mammal Sound Database:
+  -   https://cis.whoi.edu/science/B/whalesounds/index.cfm (Main source page)
+  -   https://archive.org/details/watkins_202104 (A zipped collected of all the data)
+  - https://ai.googleblog.com/2017/08/launching-speech-commands-dataset.html (Speech Commands Dataset)
