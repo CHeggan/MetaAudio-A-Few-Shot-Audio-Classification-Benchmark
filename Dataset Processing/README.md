@@ -38,6 +38,6 @@ Sources for datasets:
   - https://www.aicrowd.com/clef_tasks/22/task_dataset_files?challenge_id=211 (BirdClef2020)
   - https://www.kaggle.com/ttahara/birdsong-resampled-train-audio-00 (An easier to get approx/variant of BirdClef2020)
   - Watkins Marine Mammal Sound Database:
-  -   https://cis.whoi.edu/science/B/whalesounds/index.cfm (Main source page)
-  -   https://archive.org/details/watkins_202104 (A zipped collected of all the data)
+    - https://cis.whoi.edu/science/B/whalesounds/index.cfm (Main source page)
+    - https://archive.org/details/watkins_202104 (A zipped collected of all the data)
   - https://ai.googleblog.com/2017/08/launching-speech-commands-dataset.html (Speech Commands Dataset)
