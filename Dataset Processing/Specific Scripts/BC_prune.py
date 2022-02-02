@@ -9,6 +9,7 @@ In order to make future exprimentation more accessible, we propose pruning the
 To make applying this code more simple, we have it work over an already existing 
     version of the BirdClef dataset, applying the prune as it iterates through.
     For added speedup, we allow an option for a csv save of files to be removed etc
+   
 """
 ###############################################################################
 # IMPORTS
@@ -19,19 +20,6 @@ import librosa
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-
-###############################################################################
-# CLASS TIDY UP
-###############################################################################
-# def class_tidy(main_dir, class_thresh):
-#     contained_classes = os.listdir(main_dir)
-#     for seen_class in contained_classes:
-#         path = os.path.join(main_dir, seen_class)
-#         num_samples = len(os.listdir(path))
-#         if num_samples < class_thresh:
-#             for path in 
-#             os.remove()
-#     pass
 
 ###############################################################################
 # SAMPLE LENGTH CALC
@@ -132,45 +120,14 @@ def main(main_dir, time_thresh_s, class_thresh,  SR, remove, csv_path=None):
         print(bad_files)
         bad_files.to_csv('remove_files.csv', index=False)
 
-
+###############################################################################
+# MAIN CALL
+###############################################################################
 main_path = 'D:/Dataset Backups/Datasets/BirdSong/BirdClef2020/Sorted_npy_copy'
 csv_path = 'remove_files.csv'
 
 main(main_dir=main_path,
-    time_thresh_s=180,
-    class_thresh=50,
-    SR=16000,
-    remove=True)
-
-    # #sets working dir as array parent folder
-    # os.chdir(main_dir)
-
-    # # Gets the names of the included classes
-    # contained_classes = os.listdir(main_dir)
-
-    # # Iterates over the full folder structure and counts how many wav files 
-    # total_files = 0
-    # for root, _, files in os.walk(old_dir):
-    #     for f in files:
-    #         if f.endswith('.npy'):
-    #             total_files += 1
-    
-    # # A little visual to see how the processing is coming along
-    # progress_bar = tqdm(total=total_files)
-
-    # for seen_class in contained_classes:
-    #         working_dir = os.path.join(old_dir, seen_class)
-    #         new_working_dir = os.path.join(new_dir, seen_class)
-
-    #         try:
-    #             os.mkdir(new_working_dir)
-    #         except Exception:
-    #             print(f'Already Created: {new_working_dir}')
-
-    #         for fname in os.listdir(working_dir):
-    #             if fname.endswith('.npy'):
-    #                 file_path = os.path.join(working_dir, fname)
-
-    #                 to_spectrogram(file_path, new_working_dir, sample_length, **spec_params)
-    #                 # Update the progress bar
-    #                 progress_bar.update(1)
+    time_thresh_s=180, # Maximum time in secinds
+    class_thresh=50, # Min num samples per class
+    SR=16000, #Sample rate
+    remove=True) #Should we remove the samples yet
