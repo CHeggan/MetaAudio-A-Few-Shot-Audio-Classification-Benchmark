@@ -27,6 +27,7 @@ For working with some of these datasets, we perform some cleaning/clipping in or
 The BirdClef dataset in its main and raw form is incredibly variable in length, spanning samples of 3 seconds to 30 minutes. Although samples longer than a few minutes are in the minority of the set, their inclusion requires larger memory GPUs to be used with a huge amount of headroom assumed. This directly goes against our goal with reproducibility and so we define a pruned version of the set which is much more internally consistent. Specifically we do two things, we remove:
   - Samples longer than 3 minutes (a max value chosen based off of the well-behaving VoxCeleb dataset)
   - Classes with less than 50 samples present after long samples have already been eradiacted
+We perform experiments mainly with the pruned version of BirdClef however also include a base meta-learner table of results for the full untrimmed version.
 
 ## Dataset Sources
 Sources for datasets:
