@@ -40,7 +40,14 @@ def to_spectrogram(og_file_path, new_dir, length, **spec_args):
 
     if np.std(audio_data) == 0.0:
         print(f'File has 0 std: {og_file_path}')
-        return 
+        return
+    
+     if audio_data.shape[0] < 160000:
+        return
+
+    audio_sum = np.sum(audio_data)
+    if np.isnan(audio_sum):
+        return
 
     #If length is None, means that samples are multi-length, i.e FSD2018, so
     #   checking length isnt reasonable
