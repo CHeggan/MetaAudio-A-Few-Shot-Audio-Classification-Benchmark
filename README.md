@@ -1,9 +1,31 @@
 # MetaAudio-A-Few-Shot-Audio-Classification-Benchmark
-A new comprehensive and diverse few-shot acoustic classification benchmark. This work covers the following:
- - Standardised datasets splits and reproducible results from which to benchmark against
- - Variety of algorithms designed to deal with few-shot classification, ranging from 'cheap' traditional training pielines to SOTA Gradient-Based Meta-Learning (GBML) models
- - Both Fixed and Variable length datasets form a variety of acoustic settings
+## Citation
+A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following: 
+```
+@article{MetaAudio,
+  author = {Calum Heggan et al.},
+  title = {Meta-Audio: A Few-Shot Audio Classification Benchmark},
+  year = {2022},
+  publisher = {ICANN},
+}
+```
 
+## Contents Overview
+This repo contains the following:
+ - Multiple problem statement setups with accompanying results which can be used moving forward as baselines for few-shot acoustic classification. These include:
+   - Normal within-dataset generalisation 
+   - Joint training to both within and cross-dataset settings
+   - Additional data -> simple classifier for cross-dataset
+   - Length shifted and stratified problems for variable length dataset setting
+ - Standardised meta-learning/few-shot splits for 5 distinct datasets from a variety of sound domains. This includes both baseline (randomly generated splits) as well as some more unique and purposeful ones such as those based on available meta-data and sample length distirbuions
+ - Variety of algorithm implementations designed to deal with few-shot classification, ranging from 'cheap' traditional training pielines to SOTA Gradient-Based Meta-Learning (GBML) models
+ - Both Fixed and Variable length dataset processing pielines
+
+## Algorithm Implementations
+more specifically these include:
+  -  MAML
+  -  Meta-Curvature
+  -  Prototypical Networks
 
 ## Dataset Sources
 Sources for datasets:
