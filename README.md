@@ -21,22 +21,31 @@ This repo contains the following:
  - Variety of algorithm implementations designed to deal with few-shot classification, ranging from 'cheap' traditional training pielines to SOTA Gradient-Based Meta-Learning (GBML) models
  - Both Fixed and Variable length dataset processing pielines
 
-## Algorithms & Datasets Implementations
+## Algorithm Implementations
 Algorithms are all custom built, operating on a similar framweork with a common set of scripts. Those included are as follows:
-  -  MAML [[1]](https://arxiv.org/abs/1703.03400)
-  -  Meta-Curvature [[2]](https://arxiv.org/abs/1902.03356)
-  -  Prototypical Networks [[3]](https://arxiv.org/abs/1703.05175)
-  -  SimpleShot [[4]](https://arxiv.org/abs/1911.04623)
-  -  Meta-Baseline [[5]](https://arxiv.org/abs/2003.04390)
+  -  [MAML](https://arxiv.org/abs/1703.03400)
+  -  [Meta-Curvature](https://arxiv.org/abs/1902.03356)
+  -  [Prototypical Networks](https://arxiv.org/abs/1703.05175)
+  -  [SimpleShot](https://arxiv.org/abs/1911.04623)
+  -  [Meta-Baseline](https://arxiv.org/abs/2003.04390)
 
-## Dataset Sources
-Sources for datasets:
-  - https://github.com/karolpiczak/ESC-50 (ESC-50)
-  - https://magenta.tensorflow.org/datasets/nsynth (NSynth)
-  - https://www.robots.ox.ac.uk/~vgg/data/voxceleb/vox1.html (VoxCeleb1)
-  - https://zenodo.org/record/2552860#.Yd2sLGDP2Uk (FSDKaggle18)
-  - https://www.aicrowd.com/clef_tasks/22/task_dataset_files?challenge_id=211 (BirdClef2020)
-  - https://www.kaggle.com/ttahara/birdsong-resampled-train-audio-00 (An easier to get approx/variant of BirdClef2020)
+## Datasets
+We primarily cover 5 datasets for the majority of our experimentation, these are as follows:
+  - [ESC-50](https://www.karolpiczak.com/papers/Piczak2015-ESC-Dataset.pdf)
+  - [NSynth](https://arxiv.org/abs/1704.01279)
+  - [FSDKaggle18](https://arxiv.org/abs/1807.09902)
+  - [BirdClef2020](https://www.imageclef.org/BirdCLEF2020)
+
+In addition to these however, we also include 2 extra datasets for cross-dataset testing:
+  - [Watkins Marine Mammal Sound Database](https://cis.whoi.edu/science/B/whalesounds/index.cfm)
+  - [SpeechCommandsV2](https://arxiv.org/abs/1804.03209)
+
+as well as a vaersion of AudioSet that we define and scrape from YouTube ourselves:
+  - [AudioSet](https://ieeexplore.ieee.org/abstract/document/7952261)
+
+We include sources for all of these datasets in [Datset Processing](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark/tree/main/Dataset%20Processing)
+
+
 
 
 
