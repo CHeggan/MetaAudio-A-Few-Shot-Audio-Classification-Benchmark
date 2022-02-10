@@ -40,7 +40,7 @@ In addition to these however, we also include 2 extra datasets for cross-dataset
   - [Watkins Marine Mammal Sound Database](https://cis.whoi.edu/science/B/whalesounds/index.cfm)
   - [SpeechCommandsV2](https://arxiv.org/abs/1804.03209)
 
-as well as a vaersion of AudioSet that we define and scrape from YouTube ourselves:
+as well as a propietary version of AudioSet we use for pre-training with simple classifiers. We obtained/scraped this dataset using the code from [here](https://github.com/CHeggan/AudioSet-For-Meta-Learning):
   - [AudioSet](https://ieeexplore.ieee.org/abstract/document/7952261)
 
 We include sources for all of these datasets in [Datset Processing](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark/tree/main/Dataset%20Processing)
