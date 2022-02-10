@@ -24,11 +24,16 @@ Now that the data has been processed, we take note of the exact path to the fold
 
 ### Step 2: Algorithm Setup & Experiment
   - Navigate to the 'maml_experiment_params.yaml' file in the 'MAML_ESC' code folder
+  - Change the 'task_type' variable to whatever you like (assumes string). This is the name of the expeirment that will be attatched with final results and detailed data on training and evaluation
   - Change the 'data_path' variable to the spectrogram folder path collected from the previous step
   - execute the following in your command line with the relevant canaconda enviroment enabled:
     - > python BaseLooper.py
 
-
+### Step 3: Extracting Results
+Final results along with 95% confidence intervals should be automatically output to a .txt file in the main algorithm folder. For additional details, can navigate to the results folder to find the experiment name setup (the seed randomly chosen and used is automatically attatched to the name of the folder for reference). In this experiment specific sub-folder you can find the following:
+  - The best model (.pt) file based on validation set
+  - Some imag file to summarise training/evaluation statistics
+  - Training and validation details (.csv files)
 
 ## ProtoNets for Kaggle18
 ### Step 1: Getting & Formatting Data
