@@ -21,11 +21,13 @@ This repo contains the following:
  - Variety of algorithm implementations designed to deal with few-shot classification, ranging from 'cheap' traditional training pielines to SOTA Gradient-Based Meta-Learning (GBML) models
  - Both Fixed and Variable length dataset processing pielines
 
-## Algorithm Implementations
-more specifically these include:
-  -  MAML
-  -  Meta-Curvature
-  -  Prototypical Networks
+## Algorithms & Datasets Implementations
+Algorithms are all custom built, operating on a similar framweork with a common set of scripts. Those included are as follows:
+  -  MAML [[1]](https://arxiv.org/abs/1703.03400)
+  -  Meta-Curvature [[2]](https://arxiv.org/abs/1902.03356)
+  -  Prototypical Networks [[3]](https://arxiv.org/abs/1703.05175)
+  -  SimpleShot [[4]](https://arxiv.org/abs/1911.04623)
+  -  Meta-Baseline [[5]](https://arxiv.org/abs/2003.04390)
 
 ## Dataset Sources
 Sources for datasets:
