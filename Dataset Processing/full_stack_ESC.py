@@ -34,7 +34,7 @@ from folder_sort_ESC import main as folder_sort_main
 # Main ESC-50 folder path
 MAIN_DIR = 'C:/Users/user/Documents/Datasets/ESC-50-master'
 # Path wated for final spectrogram data
-FINAL_SPEC_PATH = 'C:/Users/user/Documents/Datasets/ESC-50-master/ESC_spec'
+FINAL_SPEC_PATH = MAIN_DIR + '/ESC_spec'
 
 NORM = True
 SAMPLE_LENGTH = 5
