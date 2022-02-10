@@ -25,7 +25,8 @@ Now that the data has been processed, we take note of the exact path to the fold
 ### Step 2: Algorithm Setup & Experiment
   - Navigate to the 'maml_experiment_params.yaml' file in the 'MAML_ESC' code folder
   - Change the 'data_path' variable to the spectrogram folder path collected from the previous step
-  - execute the following < python BaseLooper.py
+  - execute the following in your command line with the relevant canaconda enviroment enabled:
+    - < python BaseLooper.py
 
 
 
