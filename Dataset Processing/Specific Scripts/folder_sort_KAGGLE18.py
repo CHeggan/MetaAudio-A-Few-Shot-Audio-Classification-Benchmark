@@ -107,7 +107,7 @@ def main(main_dir):
 # MAIN CALL
 ##############################################################################
 
-# Main directory path
-main_dir = 'X:/Datasets/Kaggle AudioSet'
+# # Main directory path
+# main_dir = 'X:/Datasets/Kaggle AudioSet'
 
-main(main_dir)
+# main(main_dir)

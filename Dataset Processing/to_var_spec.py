@@ -206,19 +206,19 @@ def main(old_dir, new_dir, sample_length, spec_params):
 ###############################################################################
 # MAIN CALL
 ###############################################################################
-old_dir = 'D:/Dataset Backups/Datasets/BirdSong/BirdClef2020/Sorted_npy'
-new_dir = 'X:\Datasets\Bird Sounds\BirdClef 2020/Spec_5_seconds_npy_'
+# old_dir = 'D:/Dataset Backups/Datasets/BirdSong/BirdClef2020/Sorted_npy'
+# new_dir = 'X:\Datasets\Bird Sounds\BirdClef 2020/Spec_5_seconds_npy_'
 
-sample_length = 5
+# sample_length = 5
 
-spec_params = {'sr': 16000,
-                'n_mels':128,
-                'n_fft':1024,
-                'hop_length':512,
-                'power':2.0}
+# spec_params = {'sr': 16000,
+#                 'n_mels':128,
+#                 'n_fft':1024,
+#                 'hop_length':512,
+#                 'power':2.0}
 
-main(old_dir=old_dir,
-        new_dir=new_dir,
-        sample_length=sample_length,
-        spec_params=spec_params)
+# main(old_dir=old_dir,
+#         new_dir=new_dir,
+#         sample_length=sample_length,
+#         spec_params=spec_params)
 
