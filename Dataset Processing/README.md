@@ -42,4 +42,5 @@ Sources for datasets:
     - https://cis.whoi.edu/science/B/whalesounds/index.cfm (Main source page)
     - https://archive.org/details/watkins_202104 (A zipped collected of all the data)
   - http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz (Speech Commands Dataset V2)
+  - https://github.com/CHeggan/AudioSet-For-Meta-Learning (AudioSet Scraping)
 
