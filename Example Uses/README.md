@@ -15,7 +15,7 @@ These expeirments assume that you have setup an anaconda/miniconda enviroment wi
     - folder_sort_ESC.py (can be found in the 'Specific Scripts' folder)
     - full_stack_ESC.py
   - In the full_stack_ESC.py file, change the MAIN_DIR variable to the exact path to the the 'ESC-50-master' folder, see its current value in the script for an example 
-  - Run the full_stack_ESC.py file. 3 new data folder should be created:
+  - Run the full_stack_ESC.py file with the relevant conda enviroment activated. 3 new data folder should be created:
     -  Audio data sorted in its .wav format
     -  Audio data in z-normalised .npy files 
     -  Audio spectrograms (this is the folder we want to get a path to)
@@ -26,7 +26,7 @@ Now that the data has been processed, we take note of the exact path to the fold
   - Navigate to the 'maml_experiment_params.yaml' file in the 'MAML_ESC' code folder
   - Change the 'data_path' variable to the spectrogram folder path collected from the previous step
   - execute the following in your command line with the relevant canaconda enviroment enabled:
-    - < python BaseLooper.py
+    - > python BaseLooper.py
 
 
 
