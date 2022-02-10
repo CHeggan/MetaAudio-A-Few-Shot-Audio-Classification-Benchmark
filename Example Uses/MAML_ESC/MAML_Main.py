@@ -18,10 +18,6 @@ from task_sampling_classes import NShotTaskSampler
 from dataset_.SetupClass import DatasetSetup
 from dataset_.DatasetClasses import NormDataset, FastDataLoader,TrainingVariableDataset
 
-# VoxCeleb specific files
-from dataset_.VC_dataset import Vox_Dataset, TrainVox_Dataset
-from dataset_.VC_task_sampling import Vox_NShotTaskSampler
-
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
