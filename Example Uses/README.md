@@ -3,7 +3,7 @@ Included here are some full walkthorughs for testing the repo and its contained 
   - MAML for ESC-50
   - ProtoNets for Kaggle18
 
-These expeirments assume that you have setup an anaconda/miniconda enviroment with the required packages installed. Steps for this can be found on the main repo page
+These expeirments assume that you have setup an anaconda/miniconda enviroment with the required packages installed. Steps for this can be found on the main repo page.
 
 ## MAML for ESC-50
 ### Step 1: Getting & Formatting Data
@@ -29,12 +29,12 @@ Now that the data has been processed, we take note of the exact path to the fold
   - execute the following in your command line with the relevant canaconda enviroment enabled:
     - > python BaseLooper.py
 
-### Step 3: Extracting Results
+## ProtoNets for Kaggle18
+### Step 1: Getting & Formatting Data
+Download all files from here: https://zenodo.org/record/2552860#.Yd2sLGDP2Uk (there should be 4 main folders)
+
+## Extraction Of Results
 Final results along with 95% confidence intervals should be automatically output to a .txt file in the main algorithm folder. For additional details, can navigate to the results folder to find the experiment name setup (the seed randomly chosen and used is automatically attatched to the name of the folder for reference). In this experiment specific sub-folder you can find the following:
   - The best model (.pt) file based on validation set
   - Some imag file to summarise training/evaluation statistics
   - Training and validation details (.csv files)
-
-## ProtoNets for Kaggle18
-### Step 1: Getting & Formatting Data
-Download all files from here: https://zenodo.org/record/2552860#.Yd2sLGDP2Uk (there should be 4 main folders)
