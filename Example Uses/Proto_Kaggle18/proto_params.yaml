@@ -1,0 +1,61 @@
+# Main control file for ProtoNet implementation
+
+base:                                                              
+  n_way: 5                                                     
+  k_shot: 1
+  q_queries: 1                                                          
+  distance: 'l2'                                                                
+  task_type: 'PROTO_VAR_Kaggle_5_second_'
+  cuda: 0
+  num_repeats: 1
+  out_dim: 64
+
+models: ['Hybrid']
+
+hyper:
+  initial_lr: 0.0005 #0.01 #0.005
+  # The lowest lr that is ever hit                                                             
+  min_lr: 0.0001
+  # Patience for val loss
+  patience: 100000
+  # Factor of lr reduction-new_lr = lr*factor
+  factor: 0.1                 
+  # Number of episodes to warm up for before using scheduler
+  scheduler_warm_up: 20                                                                    
+
+
+training:
+  epochs: 1000 #1500
+  episodes_per_epoch: 10
+  train_batch_size: 20 # 10/20/50 
+
+  # How many tasks we want at each step
+  val_tasks: 200
+  test_tasks: 10000
+  break_threshold: 1000
+
+  # Episodes between validation steps
+  eval_spacing: 100   
+  
+  trans_batch: False
+
+  # Number workers for the dataloaders
+  num_workers: 4                                                               
+
+
+data:
+  variable: True
+  name: 'Kaggle18_5s' # Kaggle_18
+  norm: 'global'
+  type: 'variable_spec' # rawtospec/spec/variable_spec
+  fixed: True
+
+  fixed_path: 'dataset_/splits/Kaggle18_norm_split.npy'
+  data_path: 'X:/Datasets/Kaggle AudioSet/Spec_5_seconds_npy'
+
+
+# Split percentages for train/val/test
+split:
+  train: 0.7
+  val: 0.1
+  test: 0.2
