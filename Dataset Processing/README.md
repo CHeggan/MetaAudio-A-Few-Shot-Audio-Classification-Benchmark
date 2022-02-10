@@ -41,4 +41,5 @@ Sources for datasets:
   - Watkins Marine Mammal Sound Database:
     - https://cis.whoi.edu/science/B/whalesounds/index.cfm (Main source page)
     - https://archive.org/details/watkins_202104 (A zipped collected of all the data)
-  - https://ai.googleblog.com/2017/08/launching-speech-commands-dataset.html (Speech Commands Dataset)
+  - http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz (Speech Commands Dataset V2)
+
