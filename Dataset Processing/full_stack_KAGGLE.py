@@ -28,13 +28,11 @@ from to_var_spec import main as to_var_spec_main
 from to_np_and_norm import main as np_norm_main
 from folder_sort_KAGGLE18 import main as folder_sort_main
 
-#MAIN_DIR = 'X:\Datasets\ESC-50-master'
-#FINAL_SPEC_PATH = 'X:\Datasets\ESC-50-master\ESC_spec'
 
-# Main ESC-50 folder path
-MAIN_DIR = 'C:/Users/user/Documents/Datasets/ESC-50-master'
+# Main KAGGLE folder path
+MAIN_DIR = 'C:/Users/user/Documents/Datasets/FSDKaggle18/'
 # Path wated for final spectrogram data
-FINAL_SPEC_PATH = MAIN_DIR + '/ESC_spec'
+FINAL_SPEC_PATH = MAIN_DIR + '/' + 'Spec_1_second_npy'
 
 NORM = True
 SAMPLE_LENGTH = 5
