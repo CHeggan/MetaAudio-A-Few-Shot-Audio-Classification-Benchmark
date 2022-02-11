@@ -22,12 +22,14 @@ This repo contains the following:
  - Both Fixed and Variable length dataset processing pielines
 
 ## Algorithm Implementations
-Algorithms are all custom built, operating on a similar framweork with a common set of scripts. Those included are as follows:
+Algorithms are custom built, operating on a similar framweork with a common set of scripts. Those included are as follows:
   -  [MAML](https://arxiv.org/abs/1703.03400)
   -  [Meta-Curvature](https://arxiv.org/abs/1902.03356)
   -  [Prototypical Networks](https://arxiv.org/abs/1703.05175)
   -  [SimpleShot](https://arxiv.org/abs/1911.04623)
   -  [Meta-Baseline](https://arxiv.org/abs/2003.04390)
+
+For both MAML & Meta-Curvature we also make use of the [Learn2Learn](https://arxiv.org/abs/2008.12284) framework.
 
 ## Datasets
 We primarily cover 5 datasets for the majority of our experimentation, these are as follows:
