@@ -4,10 +4,10 @@
 base:
   seed: 0
   task_type: 'AudioSet_pretrain_'
-  use_all: True
+  use_all: True # do we want to use all data in teh dataset for pre-train
   cuda: 0
 
-models: ['Hybrid']
+models: ['Hybrid'] # Wan to use the hybrid globalCRNN model for training
 
 training:
   epochs: 1
@@ -22,11 +22,10 @@ hyper:
   min_lr: 0
 
 data:
-  name: 'AudioSet'
-  norm: 'global'
-  type: 'spec'
-  fixed: False
-  #data_path: 'C:/Users/user/Documents/Datasets/AudioSet/AS_spec'
+  name: 'AudioSet' # name must also be present in DatasetSetup if using some split of dataset
+  norm: 'global' #global/per_sample/channel
+  type: 'spec' # currently only coded for fixed length spectrograms
+  fixed: False # we dont want to used some fixed split of audioset's classes 
   data_path: 'C:/Users/user/Documents/Datasets/AudioSet/AS_spec_reduced_'
 
 split:
