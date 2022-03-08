@@ -1,0 +1,17 @@
+# Contains the model hyperparams and details
+
+#####################################
+# Standardised CNN & HYBRID
+#####################################
+'CNN':
+  in_channels: 1
+  hidden_channels: 64
+  pool_dim: [3, 3]
+
+'Hybrid':
+  in_channels: 1
+  seq_layers: 1
+  seq_type: 'RNN'
+  bidirectional: False
+  hidden_channels: 64
+  pool_dim: [3, 3]

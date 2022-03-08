@@ -1,0 +1,35 @@
+################################################################################
+# PRE-TRAINING EXPERIMENT PARAMS
+################################################################################
+base:
+  seed: 0
+  task_type: 'AudioSet_pretrain_'
+  use_all: True
+  cuda: 0
+
+models: ['Hybrid']
+
+training:
+  epochs: 1
+  loss: 'weighted' # weighted or normal
+  batch_type: 'normal' #normal or trans  
+  batch_size: 10
+  num_workers: 4
+
+hyper:
+  initial_lr: 0.0001
+  T_max: 1
+  min_lr: 0
+
+data:
+  name: 'AudioSet'
+  norm: 'global'
+  type: 'spec'
+  fixed: False
+  #data_path: 'C:/Users/user/Documents/Datasets/AudioSet/AS_spec'
+  data_path: 'C:/Users/user/Documents/Datasets/AudioSet/AS_spec_reduced_'
+
+split:
+  train: 0.7
+  val: 0.1
+  test: 0.2
