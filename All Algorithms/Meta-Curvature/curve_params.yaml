@@ -1,0 +1,61 @@
+base:
+  n_way: 5
+  k_shot: 1 
+  q_queries: 1
+  cuda: 0
+  num_repeats: 1
+  task_type: 'MC_VAR_Kaggle_'
+
+models: ['Hybrid']
+
+
+hyper:
+  inner_train_steps: 4
+  inner_val_steps: 4
+
+  inner_lr: 1 
+  meta_start_lr: 0.0005
+  # The lowest lr that is ever hit                                                             
+  min_meta_lr: 0.000001
+  # Patience for val loss
+  patience: 100000
+  # Factor of lr reduction-new_lr = lr*factor
+  factor: 0.1                 
+  # Number of episodes to warm up for before using scheduler
+  scheduler_warm_up: 20   
+
+
+training:
+  epochs: 300
+  episodes_per_epoch: 10
+  train_batch_size: 20 # 50
+
+  # How many tasks we want at each step
+  val_tasks: 200
+  test_tasks: 5000
+
+  # Episodes between validation steps
+  eval_spacing: 50
+  # How long to tolerate exactly radnom performance for, probs broken
+  break_threshold: 500
+  warm_up: 100000
+
+  trans_batch: False
+  num_workers: 8
+
+
+data:
+  variable: True
+  name: 'Kaggle_18' # Kaggle_18
+  norm: 'global'
+  type: 'variable_spec' #/spec/variable_spec
+  fixed: True
+  
+  fixed_path: 'dataset_/splits/Kaggle18_norm_split.npy'
+  data_path: 'C:/Users/user/Documents/Datasets/FSDKaggle18/Spec_1_second_npy'
+
+
+split:
+  train: 0.7
+  val: 0.1
+  test: 0.2

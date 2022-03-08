@@ -1,0 +1,65 @@
+# Main control file for ProtoNet implementation
+
+base:                                                              
+  n_way: 5                                                     
+  k_shot: 1 
+  q_queries: 1                                                          
+  distance: 'l2'                                                                
+  task_type: 'PROTO_VAR_BIRDCLEF_5_second_5000_smallest_esc_lr_STRAT_'
+  cuda: 0
+  num_repeats: 1
+  out_dim: 64
+
+models: ['Hybrid']
+
+hyper:
+  initial_lr: 0.0005 #0.01 #0.005
+  # The lowest lr that is ever hit                                                             
+  min_lr: 0.0001
+  # Patience for val loss
+  patience: 100000
+  # Factor of lr reduction-new_lr = lr*factor
+  factor: 0.1                 
+  # Number of episodes to warm up for before using scheduler
+  scheduler_warm_up: 20                                                                    
+
+
+training:
+  epochs: 7500 #1500
+  episodes_per_epoch: 10
+  train_batch_size: 15 # 10/20/50 (>50 Errors) (2080ti)
+
+  # How many tasks we want at each step
+  val_tasks: 200
+  test_tasks: 10000
+  break_threshold: 1000
+
+  # Episodes between validation steps
+  eval_spacing: 100   
+  
+  trans_batch: False
+
+  # Number workers for the dataloaders
+  num_workers: 4                                                        
+
+
+data:
+  variable: True
+  name: 'BirdClef' 
+  norm: 'global'
+  type: 'variable_spec' # rawtospec/spec/variable_spec
+  fixed: True
+
+  #fixed_path: 'dataset_/splits/ESC_paper_splits.npy'
+  #fixed_path: 'dataset_/splits/Kaggle18_norm_split.npy'
+  #fixed_path: 'dataset/NSYNTH_norm_split.npy'
+  fixed_path: 'dataset_/splits/BirdClef_stratified_split.npy'
+
+  #data_path: '/localdisk/home/s1529508/BirdClef/Spec_5_seconds_pruned_npy_'
+  data_path: 'X:/Datasets/Bird Sounds/BirdClef 2020/Spec_5_seconds_pruned_npy_'
+
+# Split percentages for train/val/test
+split:
+  train: 0.7
+  val: 0.1
+  test: 0.2

@@ -1,0 +1,64 @@
+##############################################################################
+# CONTROL FILE FOR SIMPLESHOT EXPERIMENTS
+##############################################################################
+
+base:
+  n_way: 5
+  k_shot: 1
+  q_queries: 1
+  cuda: 0
+  task_type: 'SS_VC_NORM_'
+  num_repeats: 1
+
+models: ['Hybrid', 'CNN']
+
+training:
+  loss: 'weighted'  # weighted / normal
+  transform: 'CL2N' # UN, L2N, CL2N
+
+  epochs: 1000
+  eval_batch_spacing: 500
+
+  batch_size: 100
+  val_tasks: 200
+  test_tasks: 10000
+
+  trans_batch: False
+  num_workers: 8
+
+hyper:
+  initial_lr: 0.0001
+  # The lowest lr that is ever hit                                                             
+  min_lr: 0.0001
+  # Patience for val loss
+  patience: 100000
+  # Factor of lr reduction-new_lr = lr*factor
+  factor: 0.1                 
+  # Number of episodes to warm up for before using scheduler
+  scheduler_warm_up: 20   
+
+data:
+  variable: True
+  name: 'VoxCeleb_5s' # Kaggle_18
+  norm: 'global'
+  type: 'variable_spec' #/spec/variable_spec
+  fixed: True
+
+  val_aware_sampling: True # 
+
+  #fixed_path: 'dataset_/splits/ESC_paper_splits.npy'
+  #fixed_path: 'dataset_/splits/Kaggle18_norm_split.npy'
+  fixed_path: 'dataset_/splits/VoxCeleb_norm_split.npy' 
+  #fixed_path: 'dataset/NSYNTH_norm_split.npy'
+  #data_path: 'C:/Users/user/Documents/Datasets/ESC-50-master/ESC_spec'
+  #data_path: 'X:/Datasets/ESC-50-master/ESC_spec'
+  #data_path: 'X:/Datasets/NSynth/NSYNTH_spec'
+  #data_path: 'X:/Datasets/Kaggle AudioSet/Spec_10_seconds_npy'
+  #data_path: 'C:/Users/user/Documents/Datasets/FSDKaggle18/Spec_1_second_npy'
+  data_path: 'X:/Datasets/VoxCeleb1/VoxSpec_5_seconds'
+
+
+split:
+  train: 0.7
+  val: 0.1
+  test: 0.2

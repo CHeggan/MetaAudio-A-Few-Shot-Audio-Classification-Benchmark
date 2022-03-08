@@ -43,7 +43,7 @@ Now that the data has been processed, we take note of the exact path to the fold
     -  Audio data sorted in its .wav format
     -  Audio data in z-normalised .npy files 
     -  Stacked audio spectrograms (this is the folder we want to get a path to)
-    -  
+
 ### Step 2: ProtoNet Setup & Experiment
   - Navigate to the 'proto_params.yaml' file in the 'Proto_Kaggle18' code folder
   - Change the 'task_type' variable to whatever you like (assumes string). This is the name of the expeirment that will be attatched with final results and detailed data on training and evaluation
