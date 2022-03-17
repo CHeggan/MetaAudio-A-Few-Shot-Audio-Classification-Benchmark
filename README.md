@@ -11,7 +11,7 @@ A new comprehensive and diverse few-shot acoustic classification benchmark. If y
 ```
 
 ## Enviroment
-We use miniconda for our enviromental setup. For recreation purpose we include the enviroment file. This can be set up using the following command
+We use miniconda for our experimental setup. For the purposes of reproduction we include the enviroment file. This can be set up using the following command
 ```
 conda env create --file torch_gpu_env.txt
 ```
