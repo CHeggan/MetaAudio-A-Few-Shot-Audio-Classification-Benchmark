@@ -5,4 +5,4 @@ In our paper we present baseline results for a variety of expeirmental settings.
 ![alt text](headline.png)
 
 # External Data 
-![alt text](extrernal.png)
+![alt text](external.png)
