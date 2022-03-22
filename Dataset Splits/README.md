@@ -4,7 +4,14 @@ One of the main contribuions of this work in a benchmark sense is the standardis
 
 This kind of standardisation is already present in few-shot imagery where set evaluation procedures exist for datasets like Mini-ImageNet and Omniglot. We aim to mimic this. 
 
-# Types of Split
+## Loading
+Splits can be loaded into a numpy array with the following command
+```python
+    class_splits = np.load(path_to_split, allow_pickle=True)
+    train, val, test = class_splits
+```
+
+## Types of Split
 In this work we experiment with many of the splits included in this repo, though not all, in an attempt to investigate some interesting and unique behaviours of few-shot acoustic classification. Included here, we have 3 different types of datasets splits:
   - Baseline (Randomly generated with no additional information taken into account)
   - Length shifted and stratified (Sample length distribution shifts or stratifications)
