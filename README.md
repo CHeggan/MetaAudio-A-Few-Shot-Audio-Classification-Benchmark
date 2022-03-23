@@ -6,7 +6,7 @@ A new comprehensive and diverse few-shot acoustic classification benchmark. If y
   author = {Calum Heggan et al.},
   title = {Meta-Audio: A Few-Shot Audio Classification Benchmark},
   year = {2022},
-  publisher = {ICANN},
+  publisher = {arXiv},
 }
 ```
 
