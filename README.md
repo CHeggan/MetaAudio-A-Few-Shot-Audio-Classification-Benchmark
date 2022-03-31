@@ -1,6 +1,6 @@
 # MetaAudio-A-Few-Shot-Audio-Classification-Benchmark
 ## Citation
-A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following: 
+A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following (paper will go live shortly): 
 ```
 @article{MetaAudio,
   author = {Calum Heggan et al.},
