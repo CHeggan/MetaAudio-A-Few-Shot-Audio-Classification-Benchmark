@@ -1,20 +1,22 @@
 # MetaAudio-A-Few-Shot-Audio-Classification-Benchmark
 ## Citation
-A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following: 
+A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following (paper will go live shortly): 
 ```
 @article{MetaAudio,
   author = {Calum Heggan et al.},
   title = {Meta-Audio: A Few-Shot Audio Classification Benchmark},
   year = {2022},
-  publisher = {ICANN},
+  publisher = {arXiv},
 }
 ```
 
 ## Enviroment
-We use miniconda for our enviromental setup. For recreation purpose we include the environment file. This can be set up using the following command
+=======
+We use miniconda for our experimental setup. For the purposes of reproduction we include the environment file. This can be set up using the following command
 ```
 conda env create --file torch_gpu_env.txt
 ```
+
 
 
 ## Contents Overview
@@ -24,8 +26,8 @@ This repo contains the following:
    - Joint training to both within and cross-dataset settings
    - Additional data -> simple classifier for cross-dataset
    - Length shifted and stratified problems for variable length dataset setting
- - Standardised meta-learning/few-shot splits for 5 distinct datasets from a variety of sound domains. This includes both baseline (randomly generated splits) as well as some more unique and purposeful ones such as those based on available meta-data and sample length distirbuions
- - Variety of algorithm implementations designed to deal with few-shot classification, ranging from 'cheap' traditional training pielines to SOTA Gradient-Based Meta-Learning (GBML) models
+ - Standardised meta-learning/few-shot splits for 5 distinct datasets from a variety of sound domains. This includes both baseline (randomly generated splits) as well as some more unique and purposeful ones such as those based on available meta-data and sample length distributions
+ - Variety of algorithm implementations designed to deal with few-shot classification, ranging from 'cheap' traditional training pipelines to SOTA Gradient-Based Meta-Learning (GBML) models
  - Both Fixed and Variable length dataset processing pielines
 
 ## Algorithm Implementations
@@ -49,10 +51,10 @@ In addition to these however, we also include 2 extra datasets for cross-dataset
   - [Watkins Marine Mammal Sound Database](https://cis.whoi.edu/science/B/whalesounds/index.cfm)
   - [SpeechCommandsV2](https://arxiv.org/abs/1804.03209)
 
-as well as a propietary version of AudioSet we use for pre-training with simple classifiers. We obtained/scraped this dataset using the code from [here](https://github.com/CHeggan/AudioSet-For-Meta-Learning):
+as well as a proprietary version of AudioSet we use for pre-training with simple classifiers. We obtained/scraped this dataset using the code from [here](https://github.com/CHeggan/AudioSet-For-Meta-Learning):
   - [AudioSet](https://ieeexplore.ieee.org/abstract/document/7952261)
 
-We include sources for all of these datasets in [Datset Processing](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark/tree/main/Dataset%20Processing)
+We include sources for all of these datasets in [Dataset Processing](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark/tree/main/Dataset%20Processing)
 
 
 
