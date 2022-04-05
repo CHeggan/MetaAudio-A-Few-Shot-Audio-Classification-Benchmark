@@ -9,6 +9,7 @@ A new comprehensive and diverse few-shot acoustic classification benchmark. If y
   publisher = {arXiv},
 }
 ```
+Licensing for work is Attribution-NonCommercial CC BY-NC
 
 ## Enviroment
 =======
@@ -16,7 +17,6 @@ We use miniconda for our experimental setup. For the purposes of reproduction we
 ```
 conda env create --file torch_gpu_env.txt
 ```
-
 
 
 ## Contents Overview
@@ -31,7 +31,7 @@ This repo contains the following:
  - Both Fixed and Variable length dataset processing pielines
 
 ## Algorithm Implementations
-Algorithms are custom built, operating on a similar framework with a common set of scripts. Those included are as follows:
+Algorithms are custom built, operating on a similar framework with a common set of scripts. Those included in the paper are as follows:
   -  [MAML](https://arxiv.org/abs/1703.03400)
   -  [Meta-Curvature](https://arxiv.org/abs/1902.03356)
   -  [Prototypical Networks](https://arxiv.org/abs/1703.05175)
