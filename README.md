@@ -2,12 +2,16 @@
 ## Citation
 A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following (paper will go live shortly): 
 ```
-@article{MetaAudio,
-  author = {Calum Heggan et al.},
-  title = {Meta-Audio: A Few-Shot Audio Classification Benchmark},
-  year = {2022},
+@misc{https://doi.org/10.48550/arxiv.2204.02121,
+  title = {MetaAudio: A Few-Shot Audio Classification Benchmark},
+  doi = {10.48550/ARXIV.2204.02121},
+  url = {https://arxiv.org/abs/2204.02121},
+  author = {Heggan, Calum and Budgett, Sam and Hospedales, Timothy and Yaghoobi, Mehrdad},
   publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
 }
+
 ```
 Licensing for work is Attribution-NonCommercial CC BY-NC
 
