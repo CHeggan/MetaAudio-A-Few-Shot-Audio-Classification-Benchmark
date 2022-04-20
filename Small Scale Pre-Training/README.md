@@ -8,4 +8,5 @@ Due to licensing we can not release the data we scraped and used from the ontolo
 
 To be clear, we don't expect much work to continue with this specific model, and encourage future researchers to build upon this external data track in a more fully reproducible way.  For this reason we also include the full code we used for pre-training the CRNN model. 
 
-
+# Results
+![alt text](small_scale_old_external.png)
