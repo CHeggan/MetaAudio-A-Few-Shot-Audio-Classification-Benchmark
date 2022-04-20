@@ -1,7 +1,5 @@
-# Pre-Training
-
-## Motivation & Data
-In our external data track of MetaAudio, we experiment with the idea of pre-training a general purpose encoder, which we then use with a simple linear classifier to solve few-shot tasks at test time. For our example results presented in the paper (only meant to highlight the possibilities), we use a proprietary version of AudioSet, downloaded and refined using the tools in this [repo](https://github.com/CHeggan/AudioSet-For-Meta-Learning). While processing this dataset, we took care in removing classes that overlapped with our primary environmental sounds dataset (ESC-50)
+# Small-Scale Pre-Training
+In our external data track of MetaAudio, we experiment with the idea of pre-training a general purpose encoder, which we then use with a simple linear classifier to solve few-shot tasks at test time. Our original set of experimnets (not included in the main paper) focused on using some small porpietary subset of AudioSet (~30k samples), downloaded and refined using the tools in this [repo](https://github.com/CHeggan/AudioSet-For-Meta-Learning). This section outlines this set of experiments. 
 
 ## Whats Included?
 Due to licensing we can not release the data we scraped and used from the ontology directly. However due to the nature of the dataset, it is likely that many samples we used are no longer available. To get around best as possible we include the fully pre-trained model (our GlobalCRNN) using our specific subset of AudioSet. Specifically we include 2 files:
