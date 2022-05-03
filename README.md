@@ -50,6 +50,7 @@ We primarily cover 5 datasets for the majority of our experimentation, these are
   - [NSynth](https://arxiv.org/abs/1704.01279)
   - [FSDKaggle18](https://arxiv.org/abs/1807.09902)
   - [BirdClef2020](https://www.imageclef.org/BirdCLEF2020)
+  - [VoxCeleb1](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/vox1.html)
 
 In addition to these however, we also include 2 extra datasets for cross-dataset testing:
   - [Watkins Marine Mammal Sound Database](https://cis.whoi.edu/science/B/whalesounds/index.cfm)
