@@ -5,7 +5,7 @@
     <span class="img_caption" style="display: block; text-align: center;"></span>
 </span>
 
-## Citation
+## Citation & Breakdown
 A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following: 
 [arXiv Link](https://arxiv.org/pdf/2204.02121v2.pdf)
 ```
@@ -21,6 +21,8 @@ A new comprehensive and diverse few-shot acoustic classification benchmark. If y
 
 ```
 Licensing for work is Attribution-NonCommercial CC BY-NC
+
+A new and (hopefully) more easily digestble blof of MetaAudio can be found [here](https://cheggan.github.io/posts/2022/04/MetaAudio_blog/)!
 
 ## Enviroment
 We use miniconda for our experimental setup. For the purposes of reproduction we include the environment file. This can be set up using the following command
