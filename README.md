@@ -5,7 +5,7 @@
     <span class="img_caption" style="display: block; text-align: center;"></span>
 </span>
 
-## Citation & Breakdown
+## Citation & Blog Breakdown
 A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following: 
 [arXiv Link](https://arxiv.org/pdf/2204.02121v2.pdf)
 ```
