@@ -5,6 +5,9 @@
     <span class="img_caption" style="display: block; text-align: center;"></span>
 </span>
 
+## News
+01/07/2022: MetaAudio accepted to ICANN22. To be presented in early September 2022. 
+
 ## Citation & Blog Breakdown
 A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following: 
 [arXiv Link](https://arxiv.org/pdf/2204.02121v2.pdf)
