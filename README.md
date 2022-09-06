@@ -6,20 +6,30 @@
 </span>
 
 ## News
+6/9/22: Presented MetaAudio at ICANN22, slides available in repo
 01/07/2022: MetaAudio accepted to ICANN22. To be presented in early September 2022. 
 
 ## Citation & Blog Breakdown
 A new comprehensive and diverse few-shot acoustic classification benchmark. If you use any code or results from results from this work, please cite the following: 
-[arXiv Link](https://arxiv.org/pdf/2204.02121v2.pdf)
+[ICANN22 Link](https://link.springer.com/chapter/10.1007/978-3-031-15919-0_19#Ack1) or [arXiv Link](https://arxiv.org/pdf/2204.02121v2.pdf)
 ```
-@misc{https://doi.org/10.48550/arxiv.2204.02121,
-  title = {MetaAudio: A Few-Shot Audio Classification Benchmark},
-  doi = {10.48550/ARXIV.2204.02121},
-  url = {https://arxiv.org/abs/2204.02121},
-  author = {Heggan, Calum and Budgett, Sam and Hospedales, Timothy and Yaghoobi, Mehrdad},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
+@InProceedings{10.1007/978-3-031-15919-0_19,
+author="Heggan, Calum
+and Budgett, Sam
+and Hospedales, Timothy
+and Yaghoobi, Mehrdad",
+editor="Pimenidis, Elias
+and Angelov, Plamen
+and Jayne, Chrisina
+and Papaleonidas, Antonios
+and Aydin, Mehmet",
+title="MetaAudio: A Few-Shot Audio Classification Benchmark",
+booktitle="Artificial Neural Networks and Machine Learning -- ICANN 2022",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="219--230",
+isbn="978-3-031-15919-0"
 }
 
 ```
