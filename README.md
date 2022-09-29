@@ -35,7 +35,7 @@ isbn="978-3-031-15919-0"
 ```
 Licensing for work is Attribution-NonCommercial CC BY-NC
 
-A new and (hopefully) more easily digestble blof of MetaAudio can be found [here](https://cheggan.github.io/posts/2022/04/MetaAudio_blog/)!
+A new and (hopefully) more easily digestble blog of MetaAudio can be found [here](https://cheggan.github.io/posts/2022/04/MetaAudio_blog/)!
 
 ## Enviroment
 We use miniconda for our experimental setup. For the purposes of reproduction we include the environment file. This can be set up using the following command
