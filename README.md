@@ -35,14 +35,13 @@ isbn="978-3-031-15919-0"
 ```
 Licensing for work is Attribution-NonCommercial CC BY-NC
 
-A new and (hopefully) more easily digestble blog of MetaAudio can be found [here](https://cheggan.github.io/posts/2022/04/MetaAudio_blog/)!
+A new and (hopefully) more easily digestible blog of MetaAudio can be found [here](https://cheggan.github.io/posts/2022/04/MetaAudio_blog/)!
 
 ## Enviroment
 We use miniconda for our experimental setup. For the purposes of reproduction we include the environment file. This can be set up using the following command
 ```
 conda env create --file torch_gpu_env.txt
 ```
-
 
 ## Contents Overview
 This repo contains the following:
@@ -53,7 +52,7 @@ This repo contains the following:
    - Length shifted and stratified problems for variable length dataset setting
  - Standardised meta-learning/few-shot splits for 5 distinct datasets from a variety of sound domains. This includes both baseline (randomly generated splits) as well as some more unique and purposeful ones such as those based on available meta-data and sample length distributions
  - Variety of algorithm implementations designed to deal with few-shot classification, ranging from 'cheap' traditional training pipelines to SOTA Gradient-Based Meta-Learning (GBML) models
- - Both Fixed and Variable length dataset processing pielines
+ - Both Fixed and Variable length dataset processing pipelines
 
 ## Algorithm Implementations
 Algorithms are custom built, operating on a similar framework with a common set of scripts. Those included in the paper are as follows:

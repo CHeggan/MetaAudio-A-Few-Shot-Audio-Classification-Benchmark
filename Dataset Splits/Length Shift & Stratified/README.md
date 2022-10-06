@@ -2,12 +2,12 @@
 
 Here we have the length distribution shifted and stratified dataset splits as well as the codes used to create them. 
 
-The idea behind defining these splits was to investigate how either similar or mismatched sample length distrbutions between train and test times impacted performance of our models. For each variable length dataset (Kaggle18, VoxCeleb1, BirdClef2020) we define both a shifted and stratified split:
+The idea behind defining these splits was to investigate how either similar or mismatched sample length distributions between train and test times impacted performance of our models. For each variable length dataset (Kaggle18, VoxCeleb1, BirdClef2020) we define both a shifted and stratified split:
   - Shifted: Making difference between train and test distributions larger
   - Stratified: Making difference smaller
   
 ## Creation Of The Splits
-Actually creating these splits can easily become a fairly complex optimisation problem itself, however to avoid this and the time/computational costs associated wetake a simple and intuitive approach. This is outlined more in the paper however the basic methodology is as follows:
+Actually creating these splits can easily become a fairly complex optimisation problem itself, however to avoid this and the time/computational costs associated we take a simple and intuitive approach. This is outlined more in the paper however the basic methodology is as follows:
   - Calculate an expected average sample length for each class based on some % of its total samples (using all samples for some classes renders poorer overall results, opt to use 60% based on some tuning)
   - Sort these expected averages in ascending or descending order
   - Two different options for shift/strat:
@@ -17,7 +17,7 @@ Actually creating these splits can easily become a fairly complex optimisation p
 ## Files
 Included in the Codes folder are the scripts for both the creation and visualisation of the sample length aware splits. Specifically we include the following scripts:
   - dist_search.py (Responsible for actually generating the new splits)
-  - length_dist.py (Visulises some dataset split)
+  - length_dist.py (Visualises some dataset split)
   - utils.py (Some basic utility functions to be used with dist_search.py)
 
 ## Example 

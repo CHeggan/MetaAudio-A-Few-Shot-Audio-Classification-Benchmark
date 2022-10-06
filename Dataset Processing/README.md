@@ -1,10 +1,10 @@
 # Processing Pipelines
 
 ## Basic Description
-This folder and its sub-parts make up the preprocessing pielines used for the 5 datasets covered in this work. The intent behind these scripts was to perform as much processing of the datasets offline as possible. In general, the offline processing of a dataset looks something like:
+This folder and its sub-parts make up the preprocessing pipelines used for the 5 datasets covered in this work. The intent behind these scripts was to perform as much processing of the datasets offline as possible. In general, the offline processing of a dataset looks something like:
   - Obtain the dataset from source (sources for the sets used in this work are given in this .md file)
-  - Sort any already partitioned or non-structured data into a more standardised strucure which looks like one folder containing folders of all unique classes, where each class folder contains every sample which has its label attatched to it (this step does not apply to all datasets however does apply to a few which have propietary meta-data and meta-data structure to parse through)
-  - Once this base structure is reached, this folder of class folders is mirrored where each sample is now saved as a .npy instead of a .wav/some other audo format (specifically for BirdClef, data samples from source had to be converted to more suitable forms whcih cost significant storage). Each sample has also been z-normalised across its length (this may not be suitable if wanting to use the dataset samples as their original time-series signal, however is for our use case of spectrograms)  
+  - Sort any already partitioned or non-structured data into a more standardised structure which looks like one folder containing folders of all unique classes, where each class folder contains every sample which has its label attached to it (this step does not apply to all datasets however does apply to a few which have proprietary meta-data and meta-data structure to parse through)
+  - Once this base structure is reached, this folder of class folders is mirrored where each sample is now saved as a .npy instead of a .wav/some other audio format (specifically for BirdClef, data samples from source had to be converted to more suitable forms which cost significant storage). Each sample has also been z-normalised across its length (this may not be suitable if wanting to use the dataset samples as their original time-series signal, however is for our use case of spectrograms)  
   - The mirror directory is then mirrored a second time (could edit codes to replace if storage is an issue), where each sample is now converted into a log-mel spectrogram and stored again as an .npy file
 
 ## General Scripts
@@ -14,7 +14,7 @@ Some of the loose files contained in this directory are general purpose and can 
   - to_var_spec.py (converts variable length .npy samples into fixed length spectrogram representations)
 
 ## Combo Scripts
-In addition to these files as well as the more specific ones included in the sub-directory are some example full stack processing pielines for a variety of the datasets. These can be edited and modified to suit specific needs but should help illustrate how all the processing scripts fit together. These are namely:
+In addition to these files as well as the more specific ones included in the sub-directory are some example full stack processing pipelines for a variety of the datasets. These can be edited and modified to suit specific needs but should help illustrate how all the processing scripts fit together. These are namely:
   - full_stack_ESC.py
   - full_stack_NSYNTH.py
 
@@ -26,7 +26,7 @@ For working with some of these datasets, we perform some cleaning/clipping in or
 ## BirdClef Pruning
 The BirdClef dataset in its main and raw form is incredibly variable in length, spanning samples of 3 seconds to 30 minutes. Although samples longer than a few minutes are in the minority of the set, their inclusion requires larger memory GPUs to be used with a huge amount of headroom assumed. This directly goes against our goal with reproducibility and so we define a pruned version of the set which is much more internally consistent. Specifically we do two things, we remove:
   - Samples longer than 3 minutes (a max value chosen based off of the well-behaving VoxCeleb dataset)
-  - Classes with less than 50 samples present after long samples have already been eradiacted
+  - Classes with less than 50 samples present after long samples have already been eradicated
  
 We perform experiments mainly with the pruned version of BirdClef however also include a base meta-learner table of results for the full untrimmed version.
 
