@@ -42,7 +42,7 @@ def to_spectrogram(og_file_path, new_dir, length, **spec_args):
         print(f'File has 0 std: {og_file_path}')
         return
     
-     if audio_data.shape[0] < 160000:
+    if audio_data.shape[0] < 160000:
         return
 
     audio_sum = np.sum(audio_data)
