@@ -6,7 +6,7 @@ Script exists to store the messier code for model selection for training
 ################################################################################
 import torch
 
-from models.ACDNets_ import GetACDNetModel
+# from models.ACDNets_ import GetACDNetModel
 from models.Conv_and_Hybrid import StandardHybrid, StandardCNN
 
 ################################################################################
@@ -17,8 +17,8 @@ def grab_model(name, mod, out_dim):
         model = StandardCNN(out_dim=out_dim, **mod)
     elif name == 'Hybrid':
         model = StandardHybrid(out_dim=out_dim, **mod)
-    elif name == 'ACDNet':
-        model = GetACDNetModel(out_dim=out_dim, **mod)
+    # elif name == 'ACDNet':
+    #     model = GetACDNetModel(out_dim=out_dim, **mod)
     return model
 
 
