@@ -41,7 +41,7 @@ data:
   variable: False
   name: 'ESC' 
   norm: 'global'
-  type: 'variable_spec' #/spec/variable_spec/raw/variable_raw
+  type: 'spec' #/spec/variable_spec/raw/variable_raw
   fixed: True
 
   fixed_path: 'dataset_/splits/ESC_paper_splits.npy'
