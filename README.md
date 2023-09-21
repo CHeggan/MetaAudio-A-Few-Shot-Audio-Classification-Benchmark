@@ -5,6 +5,10 @@
     <span class="img_caption" style="display: block; text-align: center;"></span>
 </span>
 
+## Future Plans (Late 2023):
+ - Release all pre-trained models for community use
+ - Hyperparamater document
+
 ## News
  - 6/9/22: Presented MetaAudio at ICANN22, slides available in repo
  - 01/07/2022: MetaAudio accepted to ICANN22. To be presented in early September 2022. 
