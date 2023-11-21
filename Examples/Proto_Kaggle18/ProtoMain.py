@@ -92,7 +92,7 @@ def single_run_main(params, model, device, batch_fns, seed):
                         norm=params['data']['norm'],
                         stats_file_path=setup.stats_file_path)
 
-
+    val_batch_size = 1 if params['data']['variable'], else params['training']['train_batch_size']
     # Actually creates the dataloaders
     backTaskloader = FastDataLoader(
         background, batch_sampler= train_task_sampler(dataset=background,
@@ -111,7 +111,7 @@ def single_run_main(params, model, device, batch_fns, seed):
                                         n_way=params['base']['n_way'],
                                         k_shot=params['base']['k_shot'],
                                         q_queries=params['base']['q_queries'],
-                                        num_tasks=1,
+                                        num_tasks=val_batch_size,
                                         seed=seed),
                                         num_workers=params['training']['num_workers'],
                                         collate_fn=val_coll)
@@ -122,7 +122,7 @@ def single_run_main(params, model, device, batch_fns, seed):
                                         n_way=params['base']['n_way'],
                                         k_shot=params['base']['k_shot'],
                                         q_queries=params['base']['q_queries'],
-                                        num_tasks=1,
+                                        num_tasks=val_batch_size,
                                         seed=seed),
                                         num_workers=params['training']['num_workers'],
                                         collate_fn=val_coll)
