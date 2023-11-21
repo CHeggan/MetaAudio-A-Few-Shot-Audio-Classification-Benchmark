@@ -10,6 +10,7 @@
  - Hyperparamater document
 
 ## News
+ - 10/01/23: New MetaAudio sets released in [MT-SLVR Paper](https://github.com/CHeggan/MT-SLVR)
  - 6/9/22: Presented MetaAudio at ICANN22, slides available in repo
  - 01/07/2022: MetaAudio accepted to ICANN22. To be presented in early September 2022. 
 
