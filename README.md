@@ -5,12 +5,13 @@
     <span class="img_caption" style="display: block; text-align: center;"></span>
 </span>
 
-## Future Plans (Late 2023):
+## Future Plans (Soon):
  - Release all pre-trained models for community use
- - Hyperparamater document
 
-## News
- - 10/01/23: New MetaAudio sets released in [MT-SLVR Paper](https://github.com/CHeggan/MT-SLVR)
+
+## News/Updates
+ - 24/5/24: Hyperparamater and original results files now available in "Other Files"
+ - 10/01/23: New MetaAudio datasets released in [MT-SLVR Paper](https://github.com/CHeggan/MT-SLVR). New sets revolve around few-shot speech classification. 
  - 6/9/22: Presented MetaAudio at ICANN22, slides available in repo
  - 01/07/2022: MetaAudio accepted to ICANN22. To be presented in early September 2022. 
 
@@ -23,11 +24,6 @@ author="Heggan, Calum
 and Budgett, Sam
 and Hospedales, Timothy
 and Yaghoobi, Mehrdad",
-editor="Pimenidis, Elias
-and Angelov, Plamen
-and Jayne, Chrisina
-and Papaleonidas, Antonios
-and Aydin, Mehmet",
 title="MetaAudio: A Few-Shot Audio Classification Benchmark",
 booktitle="Artificial Neural Networks and Machine Learning -- ICANN 2022",
 year="2022",
@@ -38,11 +34,20 @@ isbn="978-3-031-15919-0"
 }
 
 ```
-Licensing for work is Attribution-NonCommercial CC BY-NC
 
 A new and (hopefully) more easily digestible blog of MetaAudio can be found [here](https://cheggan.github.io/posts/2022/04/MetaAudio_blog/)!
 
 ## Enviroment
+**IMPORTANT NOTE:** This environment auto configuration file appears to be broken (there is an old open issue for it). Unfortunately I do not have the time to properly fix this right now. My personal recommendation is to create a new python 3.8.5 environment and then install a few key packages using the versions listed in the document. After this just try to run an example and install the other things it asks for. Some packages I would recommend using the listed versions (from torch_gpu_env.txt) for:
+ - PyTorch
+ - Learn2learn
+ - NumPy
+ - pandas
+ - Pysoundfile
+ - Torchaudio
+ - cudatoolkit
+
+
 We use miniconda for our experimental setup. For the purposes of reproduction we include the environment file. This can be set up using the following command
 ```
 conda env create --name metaaudio --file torch_gpu_env.txt
