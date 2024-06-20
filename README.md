@@ -5,11 +5,9 @@
     <span class="img_caption" style="display: block; text-align: center;"></span>
 </span>
 
-## Future Plans (Soon):
- - Release all pre-trained models for community use
-
 
 ## News/Updates
+ - Pre-Trained Models now available [here](https://drive.google.com/drive/folders/1DpWJplhPrMWmp-pW9S3L70kEQcjXm-ZC?usp=drive_link)
  - 24/5/24: Hyperparamater and original results files now available in "Other Files"
  - 10/01/23: New MetaAudio datasets released in [MT-SLVR Paper](https://github.com/CHeggan/MT-SLVR). New sets revolve around few-shot speech classification. 
  - 6/9/22: Presented MetaAudio at ICANN22, slides available in repo
@@ -73,6 +71,9 @@ Algorithms are custom built, operating on a similar framework with a common set 
   -  [Meta-Baseline](https://arxiv.org/abs/2003.04390)
 
 For both MAML & Meta-Curvature we also make use of the [Learn2Learn](https://arxiv.org/abs/2008.12284) framework.
+
+## Pre-Trained Models
+All of the models (except from the pre-trained AST ones) can now be found and downsloaded from [here](https://drive.google.com/drive/folders/1DpWJplhPrMWmp-pW9S3L70kEQcjXm-ZC?usp=drive_link).
 
 ## Datasets
 We primarily cover 5 datasets for the majority of our experimentation, these are as follows:
